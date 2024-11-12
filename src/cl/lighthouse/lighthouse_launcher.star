@@ -243,7 +243,7 @@ def get_beacon_config(
     cmd = [
         LIGHTHOUSE_BINARY_COMMAND,
         "beacon_node",
-        "--debug-level=" + log_level,
+        "--debug-level=debug",
         "--datadir=" + BEACON_DATA_DIRPATH_ON_BEACON_SERVICE_CONTAINER,
         # vvvvvvvvvvvvvvvvvvv REMOVE THESE WHEN CONNECTING TO EXTERNAL NET vvvvvvvvvvvvvvvvvvvvv
         "--disable-enr-auto-update",
@@ -351,7 +351,6 @@ def get_beacon_config(
     config_args = {
         "image": image,
         "ports": used_ports,
-        "startup_timeout_seconds": custom_timeout, 
         "public_ports": public_ports,
         "cmd": cmd,
         "files": files,
