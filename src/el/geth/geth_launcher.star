@@ -323,6 +323,7 @@ def get_config(
             persistent_key="data-{0}".format(service_name),
             size=el_volume_size,
         )
+    custom_timeout = 300
     config_args = {
         "image": image,
         "ports": used_ports,
