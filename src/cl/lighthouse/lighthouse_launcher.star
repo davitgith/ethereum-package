@@ -347,9 +347,11 @@ def get_beacon_config(
         )
     env = {RUST_BACKTRACE_ENVVAR_NAME: RUST_FULL_BACKTRACE_KEYWORD}
     env.update(extra_env_vars)
+    custom_timeout = 300
     config_args = {
         "image": image,
         "ports": used_ports,
+        "startup_timeout_seconds": custom_timeout, 
         "public_ports": public_ports,
         "cmd": cmd,
         "files": files,
