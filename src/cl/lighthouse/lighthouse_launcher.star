@@ -271,7 +271,8 @@ def get_beacon_config(
         "--metrics",
         "--metrics-address=0.0.0.0",
         "--metrics-allow-origin=*",
-        "--allow-insecure-genesis-sync",
+        "--network=sepolia",
+        "--checkpoint-sync-url=https://checkpoint-sync.sepolia.ethpandaops.io",
         "--metrics-port={0}".format(BEACON_METRICS_PORT_NUM),
         # ^^^^^^^^^^^^^^^^^^^ METRICS CONFIG ^^^^^^^^^^^^^^^^^^^^^
         # Enable this flag once we have https://github.com/sigp/lighthouse/issues/5054 fixed
